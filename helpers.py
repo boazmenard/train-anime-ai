@@ -3,7 +3,6 @@ import os
 import openai
 import streamlit as st
 
-#openai.api_key = "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"
 openai.api_key = st.secrets["OPENAI_API_KEY"]
 
 def generateWorkoutPlan(anime_character, anime_title):
