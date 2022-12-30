@@ -10,7 +10,7 @@ The exercises provided here are for educational and entertainment purposes only,
 """)
 
 with st.expander("How it works 👇"):
-    st.write("1. Input the anime character and what anime they're from. Don't leave either blank.")
+    st.write("1. Input the anime character. Don't leave it blank.")
     st.write("2. Watch the magic.")
     st.write("We use GPT-3 to take the anime character and title to construct a prompt to get you the workout and diet plan. It's a quick and dirty build so look past any faults/errors, just shoot me a message!")
     
@@ -33,9 +33,8 @@ with st.sidebar:
 
 st.write('Train like your favorite anime character. Use the power of anime to achieve fitness immortality.')
 anime_character = st.text_input("Enter Your Anime Muse:", placeholder="Sasuke Uchiha")
-anime_title = st.text_input("Enter The Anime Title:", placeholder="Naruto")
 
 if st.button("Get Workout Plan"):
-    workout_plan = generateWorkoutPlan(anime_character, anime_title)
+    workout_plan = generateWorkoutPlan(anime_character)
     st.header('Training Plan')
     st.write(workout_plan)
