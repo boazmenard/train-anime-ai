@@ -1,5 +1,4 @@
 """All the helpers for the app."""
-import os
 import openai
 import streamlit as st
 
